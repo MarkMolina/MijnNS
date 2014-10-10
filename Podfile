@@ -12,3 +12,5 @@ end
 target "My NSTests" do
 
 end
+
+xcodeproj 'My NS/My NS.xcodeproj'
