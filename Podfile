@@ -6,6 +6,9 @@ source 'https://github.com/CocoaPods/Specs.git'
 target "My NS" do
 
 pod 'Reachability'
+pod 'RestKit'
+pod 'RKXMLReaderSerialization', :git => 'https://github.com/RestKit/RKXMLReaderSerialization.git', :branch => 'master'
+pod 'FLKAutoLayout'
 
 end
 

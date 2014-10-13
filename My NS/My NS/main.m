@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AppDelegate.h"
+#import "CCAppDelegate.h"
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+#ifndef GENERATE_SEED_DB
+        return UIApplicationMain(argc, argv, nil, @"CCAppDelegate");
+#else
+        return UIApplicationMain(argc, argv, nil, @"CCSeedAppDelegate");
+#endif
     }
 }

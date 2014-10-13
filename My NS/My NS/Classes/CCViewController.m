@@ -1,22 +1,22 @@
 //
-//  ViewController.m
+//  CCViewController.m
 //  My NS
 //
-//  Created by Mark Molina on 10/10/14.
+//  Created by Mark Molina on 11/10/14.
 //  Copyright (c) 2014 CleverCode. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CCViewController.h"
 
-@interface ViewController ()
+@interface CCViewController ()
 
 @end
 
-@implementation ViewController
+@implementation CCViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

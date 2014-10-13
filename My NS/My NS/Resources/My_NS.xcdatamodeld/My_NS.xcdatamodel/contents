@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6251" systemVersion="13F34" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CCStation" representedClassName="CCStation" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mediumName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uicode" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="fromTrips" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CCTrip" inverseName="from" inverseEntity="CCTrip" syncable="YES"/>
+        <relationship name="toTrips" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CCTrip" inverseName="to" inverseEntity="CCTrip" syncable="YES"/>
+        <relationship name="viaTrips" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CCTrip" inverseName="via" inverseEntity="CCTrip" syncable="YES"/>
+    </entity>
+    <entity name="CCTrip" representedClassName="CCTrip" syncable="YES">
+        <attribute name="departure" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="travelDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="from" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CCStation" inverseName="fromTrips" inverseEntity="CCStation" syncable="YES"/>
+        <relationship name="possibilities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CCTripPossibility" inverseName="trip" inverseEntity="CCTripPossibility" syncable="YES"/>
+        <relationship name="to" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CCStation" inverseName="toTrips" inverseEntity="CCStation" syncable="YES"/>
+        <relationship name="via" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CCStation" inverseName="viaTrips" inverseEntity="CCStation" syncable="YES"/>
+    </entity>
+    <entity name="CCTripPart" syncable="YES">
+        <attribute name="owner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tripid" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="possibilities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CCTripPossibility" inverseName="parts" inverseEntity="CCTripPossibility" syncable="YES"/>
+        <relationship name="stops" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CCTripStop" inverseName="parts" inverseEntity="CCTripStop" syncable="YES"/>
+    </entity>
+    <entity name="CCTripPossibility" syncable="YES">
+        <attribute name="actualArrivalTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="actualDepartureTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="actualTravelTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="optimal" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="plannedArrivalTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="plannedDepartureTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="plannedTravelTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transfers" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="parts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CCTripPart" inverseName="possibilities" inverseEntity="CCTripPart" syncable="YES"/>
+        <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CCTrip" inverseName="possibilities" inverseEntity="CCTrip" syncable="YES"/>
+    </entity>
+    <entity name="CCTripStop" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="track" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="parts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CCTripPart" inverseName="stops" inverseEntity="CCTripPart" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CCStation" positionX="-225" positionY="-235" width="128" height="208"/>
+        <element name="CCTrip" positionX="9" positionY="-153" width="128" height="133"/>
+        <element name="CCTripPossibility" positionX="324" positionY="-37" width="128" height="208"/>
+        <element name="CCTripPart" positionX="61" positionY="63" width="128" height="133"/>
+        <element name="CCTripStop" positionX="322" positionY="207" width="128" height="103"/>
+    </elements>
+</model>
