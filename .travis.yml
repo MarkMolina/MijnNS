@@ -2,6 +2,9 @@ language: objective-c
 rvm: 1.9.3
 before_install:
   - gem install cocoapods -v '0.34.1'
+  - brew update
+  - brew unlink xctool
+  - brew install xctool
 script:
-- xcodebuild -workspace My\ NS.xcworkspace -scheme My\ NS -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- xctool -workspace My\ NS.xcworkspace -scheme My\ NS -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 - xctool test -workspace My\ NS.xcworkspace -scheme My\ NSTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
