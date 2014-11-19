@@ -3,7 +3,6 @@ rvm: 1.9.3
 before_install:
 - gem install cocoapods -v '0.34.1'
 - brew update
-- brew unlink xctool
 - brew install xctool
 before_script:
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/My_NS_AdHoc.mobileprovision.enc -d -a -out scripts/profile/My_NS_AdHoc.mobileprovision
@@ -12,7 +11,7 @@ before_script:
 - ./scripts/add-key.sh
 - ./scripts/update-bundle.sh
 script:
-- xctool -workspace My\ NS.xcworkspace -scheme My\ NS -sdk iphoneos -configuration Distribution OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
+- xctool -workspace My\ NS.xcworkspace -scheme My\ NS -sdk iphoneos -configuration Distribution OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO HOCKEY_APP_ID=$HOCKEY_APP_ID
 - xctool test -workspace My\ NS.xcworkspace -scheme My\ NSTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 after_script:
 - ./scripts/remove-key.sh
