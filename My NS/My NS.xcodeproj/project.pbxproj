@@ -111,19 +111,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4D88914319EBD34100773C16 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D3805C819E831EB000BC554 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4D06839B19EAC74B006B088A;
-			remoteInfo = "My NS Seed";
-		};
 		4D88914519EBD34600773C16 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D3805C819E831EB000BC554 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4D06844119EB3112006B088A;
 			remoteInfo = "My NS";
+		};
+		4DB8C3D01A1CB321007C7072 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D3805C819E831EB000BC554 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D06839B19EAC74B006B088A;
+			remoteInfo = "My NS Seed";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -883,7 +883,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				4D88914419EBD34100773C16 /* PBXTargetDependency */,
+				4DB8C3D11A1CB321007C7072 /* PBXTargetDependency */,
 				4D88914619EBD34600773C16 /* PBXTargetDependency */,
 			);
 			name = "My NSTests";
@@ -1154,15 +1154,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4D88914419EBD34100773C16 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4D06839B19EAC74B006B088A /* My NS Seed */;
-			targetProxy = 4D88914319EBD34100773C16 /* PBXContainerItemProxy */;
-		};
 		4D88914619EBD34600773C16 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4D06844119EB3112006B088A /* My NS */;
 			targetProxy = 4D88914519EBD34600773C16 /* PBXContainerItemProxy */;
+		};
+		4DB8C3D11A1CB321007C7072 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D06839B19EAC74B006B088A /* My NS Seed */;
+			targetProxy = 4DB8C3D01A1CB321007C7072 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1340,6 +1340,7 @@
 		4D3805FA19E831EB000BC554 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1358,6 +1359,7 @@
 		4D3805FB19E831EB000BC554 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
