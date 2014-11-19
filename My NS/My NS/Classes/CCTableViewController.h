@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 CleverCode. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 #import "CCViewController.h"
 
 @protocol CCTableViewController;

@@ -67,6 +67,8 @@ NSString * const kStationSelected           = @"StationSelected";
     [self.addInteractor saveTrip];
     
     [self.addWireframe dismissAddInterface];
+    
+    [self.addModuleDelegate addModuleDidSaveAddAction];
 }
 
 @end

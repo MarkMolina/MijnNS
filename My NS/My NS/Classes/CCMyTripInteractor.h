@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "CCMyTripInteractorIO.h"
+#import "CCServerManagerDelegate.h"
 
 @class CCMyTripDataManager;
 @class CCTrip;
 
-@interface CCMyTripInteractor : NSObject <CCMyTripInteractorInput>
+@interface CCMyTripInteractor : NSObject <CCMyTripInteractorInput, CCServerManagerDelegate>
 
+//@property (nonatomic, strong) CCTrip *selectedTrip;
 @property (nonatomic, weak)     id<CCMyTripInteractorOutput> output;
 
 - (instancetype)initWithDataManager:(CCMyTripDataManager *)dataManager;

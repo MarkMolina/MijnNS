@@ -13,6 +13,8 @@
 
 @interface CCManagedObjectStore : RKManagedObjectStore
 
+typedef void(^CCDataStoreFetchCompletionBlock)(NSArray *results);
+
 + (instancetype)sharedInstance;
 + (void)setSharedManagedObjectModel:(NSManagedObjectModel*)sharedObjectModel;
 + (NSManagedObjectModel*)sharedManagedObjectModel;
@@ -20,5 +22,9 @@
 - (NSManagedObjectContext*)managedObjectContext;
 - (CCTrip *)newTrip;
 - (void)save;
+- (void)fetchEntriesWithPredicate:(NSPredicate *)predicate
+                  sortDescriptors:(NSArray *)sortDescriptors
+                         forModel:(Class) model
+                  completionBlock:(CCDataStoreFetchCompletionBlock)completionBlock;
 
 @end

@@ -70,13 +70,38 @@
 		4D06847419EB32C8006B088A /* data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4D06847319EB32BE006B088A /* data.xml */; };
 		4D06847619EB3AF4006B088A /* data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4D06847319EB32BE006B088A /* data.xml */; };
 		4D3805F319E831EB000BC554 /* My_NSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3805F219E831EB000BC554 /* My_NSTests.m */; };
-		4D84F2B619EC13F200F29562 /* Seeds in Resources */ = {isa = PBXBuildFile; fileRef = 4D84F2B519EC13F200F29562 /* Seeds */; };
+		4D68446F19F16974002735C8 /* CCMultipleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D68446E19F16974002735C8 /* CCMultipleTableViewController.m */; };
+		4D68447019F16974002735C8 /* CCMultipleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D68446E19F16974002735C8 /* CCMultipleTableViewController.m */; };
+		4D7D25DE19ED0B250087C36F /* CCDetailWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D25DD19ED0B250087C36F /* CCDetailWireFrame.m */; };
+		4D7D25DF19ED0B250087C36F /* CCDetailWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D25DD19ED0B250087C36F /* CCDetailWireFrame.m */; };
+		4D7D25E519ED146B0087C36F /* Seeds in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D25E419ED146B0087C36F /* Seeds */; };
+		4D7D25E619ED14B20087C36F /* Seeds in Resources */ = {isa = PBXBuildFile; fileRef = 4D7D25E419ED146B0087C36F /* Seeds */; };
+		4D7D25E919ED172D0087C36F /* CCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D25E819ED172D0087C36F /* CCDetailViewController.m */; };
+		4D7D25EA19ED172D0087C36F /* CCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D25E819ED172D0087C36F /* CCDetailViewController.m */; };
+		4D7D25ED19ED1AB80087C36F /* CCDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D25EC19ED1AB80087C36F /* CCDetailPresenter.m */; };
+		4D7D25EE19ED1AB80087C36F /* CCDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D25EC19ED1AB80087C36F /* CCDetailPresenter.m */; };
+		4D7D25F219ED1AD20087C36F /* CCDetailInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D25F119ED1AD20087C36F /* CCDetailInteractor.m */; };
+		4D7D25F319ED1AD20087C36F /* CCDetailInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D25F119ED1AD20087C36F /* CCDetailInteractor.m */; };
+		4D7D25F619ED1AF20087C36F /* CCDetailDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D25F519ED1AF20087C36F /* CCDetailDataManager.m */; };
+		4D7D25F719ED1AF20087C36F /* CCDetailDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D25F519ED1AF20087C36F /* CCDetailDataManager.m */; };
+		4D7D260619ED2D1D0087C36F /* CCObjectsFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D260519ED2D1D0087C36F /* CCObjectsFetcher.m */; };
+		4D7D260719ED2D1D0087C36F /* CCObjectsFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D260519ED2D1D0087C36F /* CCObjectsFetcher.m */; };
+		4D7D260F19ED34220087C36F /* CCServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D260E19ED34220087C36F /* CCServerManager.m */; };
+		4D7D261019ED34220087C36F /* CCServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D260E19ED34220087C36F /* CCServerManager.m */; };
+		4D7D261319ED46B90087C36F /* CCTripPossibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D261219ED46B90087C36F /* CCTripPossibility.m */; };
+		4D7D261419ED46B90087C36F /* CCTripPossibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D261219ED46B90087C36F /* CCTripPossibility.m */; };
+		4D7D261719ED46BA0087C36F /* CCTripStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D261619ED46BA0087C36F /* CCTripStop.m */; };
+		4D7D261819ED46BA0087C36F /* CCTripStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D261619ED46BA0087C36F /* CCTripStop.m */; };
+		4D7D261B19ED46BA0087C36F /* CCTripPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D261A19ED46BA0087C36F /* CCTripPart.m */; };
+		4D7D261C19ED46BA0087C36F /* CCTripPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D261A19ED46BA0087C36F /* CCTripPart.m */; };
+		4D7D261F19ED52570087C36F /* CCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D261E19ED52570087C36F /* CCUtils.m */; };
+		4D7D262019ED52570087C36F /* CCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D261E19ED52570087C36F /* CCUtils.m */; };
+		4D7D262819ED74120087C36F /* CCTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D262719ED74120087C36F /* CCTrip.m */; };
+		4D7D262919ED74120087C36F /* CCTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D262719ED74120087C36F /* CCTrip.m */; };
 		4D84F2B919EC17E600F29562 /* CCMyTripTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D84F2B819EC17E600F29562 /* CCMyTripTableViewCell.m */; };
 		4D84F2BB19EC187C00F29562 /* CCMyTripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D84F2BA19EC187C00F29562 /* CCMyTripTableViewCell.xib */; };
 		4D84F2BC19EC187C00F29562 /* CCMyTripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D84F2BA19EC187C00F29562 /* CCMyTripTableViewCell.xib */; };
 		4D84F2BD19EC1CEA00F29562 /* CCMyTripTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D84F2B819EC17E600F29562 /* CCMyTripTableViewCell.m */; };
-		4D88913819EBCB2200773C16 /* CCTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88913719EBCB2200773C16 /* CCTrip.m */; };
-		4D88913919EBCB2200773C16 /* CCTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88913719EBCB2200773C16 /* CCTrip.m */; };
 		4D88913C19EBCB6A00773C16 /* CCStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88913B19EBCB6A00773C16 /* CCStation.m */; };
 		4D88913D19EBCB6A00773C16 /* CCStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88913B19EBCB6A00773C16 /* CCStation.m */; };
 		4D88914019EBCD2800773C16 /* CCTripModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D88913F19EBCD2800773C16 /* CCTripModel.m */; };
@@ -145,13 +170,41 @@
 		4D3805EC19E831EB000BC554 /* My NSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My NSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3805F119E831EB000BC554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D3805F219E831EB000BC554 /* My_NSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = My_NSTests.m; sourceTree = "<group>"; };
-		4D84F2B519EC13F200F29562 /* Seeds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Seeds; path = "My NS/Resources/Seeds"; sourceTree = "<group>"; };
+		4D68446D19F16973002735C8 /* CCMultipleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCMultipleTableViewController.h; path = Classes/CCMultipleTableViewController.h; sourceTree = "<group>"; };
+		4D68446E19F16974002735C8 /* CCMultipleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCMultipleTableViewController.m; path = Classes/CCMultipleTableViewController.m; sourceTree = "<group>"; };
+		4D7D25DC19ED0B250087C36F /* CCDetailWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDetailWireFrame.h; path = Classes/CCDetailWireFrame.h; sourceTree = "<group>"; };
+		4D7D25DD19ED0B250087C36F /* CCDetailWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDetailWireFrame.m; path = Classes/CCDetailWireFrame.m; sourceTree = "<group>"; };
+		4D7D25E419ED146B0087C36F /* Seeds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Seeds; path = "My NS/Resources/Seeds"; sourceTree = "<group>"; };
+		4D7D25E719ED172D0087C36F /* CCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDetailViewController.h; path = Classes/CCDetailViewController.h; sourceTree = "<group>"; };
+		4D7D25E819ED172D0087C36F /* CCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDetailViewController.m; path = Classes/CCDetailViewController.m; sourceTree = "<group>"; };
+		4D7D25EB19ED1AB80087C36F /* CCDetailPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDetailPresenter.h; path = Classes/CCDetailPresenter.h; sourceTree = "<group>"; };
+		4D7D25EC19ED1AB80087C36F /* CCDetailPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDetailPresenter.m; path = Classes/CCDetailPresenter.m; sourceTree = "<group>"; };
+		4D7D25F019ED1AD20087C36F /* CCDetailInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDetailInteractor.h; path = Classes/CCDetailInteractor.h; sourceTree = "<group>"; };
+		4D7D25F119ED1AD20087C36F /* CCDetailInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDetailInteractor.m; path = Classes/CCDetailInteractor.m; sourceTree = "<group>"; };
+		4D7D25F419ED1AF20087C36F /* CCDetailDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCDetailDataManager.h; path = Classes/CCDetailDataManager.h; sourceTree = "<group>"; };
+		4D7D25F519ED1AF20087C36F /* CCDetailDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCDetailDataManager.m; path = Classes/CCDetailDataManager.m; sourceTree = "<group>"; };
+		4D7D25F819ED1B470087C36F /* CCDetailInteractorIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCDetailInteractorIO.h; path = Classes/CCDetailInteractorIO.h; sourceTree = "<group>"; };
+		4D7D25F919ED1BCA0087C36F /* CCDetailInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCDetailInterface.h; path = Classes/CCDetailInterface.h; sourceTree = "<group>"; };
+		4D7D25FE19ED21940087C36F /* CCDetailModuleInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCDetailModuleInterface.h; path = Classes/CCDetailModuleInterface.h; sourceTree = "<group>"; };
+		4D7D260419ED2D1D0087C36F /* CCObjectsFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCObjectsFetcher.h; path = Classes/CCObjectsFetcher.h; sourceTree = "<group>"; };
+		4D7D260519ED2D1D0087C36F /* CCObjectsFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCObjectsFetcher.m; path = Classes/CCObjectsFetcher.m; sourceTree = "<group>"; };
+		4D7D260D19ED34220087C36F /* CCServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCServerManager.h; path = Classes/CCServerManager.h; sourceTree = "<group>"; };
+		4D7D260E19ED34220087C36F /* CCServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCServerManager.m; path = Classes/CCServerManager.m; sourceTree = "<group>"; };
+		4D7D261119ED46B90087C36F /* CCTripPossibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTripPossibility.h; path = Classes/CCTripPossibility.h; sourceTree = "<group>"; };
+		4D7D261219ED46B90087C36F /* CCTripPossibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTripPossibility.m; path = Classes/CCTripPossibility.m; sourceTree = "<group>"; };
+		4D7D261519ED46BA0087C36F /* CCTripStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTripStop.h; path = Classes/CCTripStop.h; sourceTree = "<group>"; };
+		4D7D261619ED46BA0087C36F /* CCTripStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTripStop.m; path = Classes/CCTripStop.m; sourceTree = "<group>"; };
+		4D7D261919ED46BA0087C36F /* CCTripPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTripPart.h; path = Classes/CCTripPart.h; sourceTree = "<group>"; };
+		4D7D261A19ED46BA0087C36F /* CCTripPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTripPart.m; path = Classes/CCTripPart.m; sourceTree = "<group>"; };
+		4D7D261D19ED52570087C36F /* CCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCUtils.h; path = Classes/CCUtils.h; sourceTree = "<group>"; };
+		4D7D261E19ED52570087C36F /* CCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCUtils.m; path = Classes/CCUtils.m; sourceTree = "<group>"; };
+		4D7D262519ED5A380087C36F /* CCServerManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCServerManagerDelegate.h; path = Classes/CCServerManagerDelegate.h; sourceTree = "<group>"; };
+		4D7D262619ED74120087C36F /* CCTrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTrip.h; path = Classes/CCTrip.h; sourceTree = "<group>"; };
+		4D7D262719ED74120087C36F /* CCTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTrip.m; path = Classes/CCTrip.m; sourceTree = "<group>"; };
 		4D84F2B719EC17E600F29562 /* CCMyTripTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCMyTripTableViewCell.h; path = Classes/CCMyTripTableViewCell.h; sourceTree = "<group>"; };
 		4D84F2B819EC17E600F29562 /* CCMyTripTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCMyTripTableViewCell.m; path = Classes/CCMyTripTableViewCell.m; sourceTree = "<group>"; };
 		4D84F2BA19EC187C00F29562 /* CCMyTripTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CCMyTripTableViewCell.xib; path = Classes/CCMyTripTableViewCell.xib; sourceTree = "<group>"; };
 		4D88913519EBC02B00773C16 /* CCAllStationsInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCAllStationsInterface.h; path = Classes/CCAllStationsInterface.h; sourceTree = "<group>"; };
-		4D88913619EBCB2200773C16 /* CCTrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTrip.h; path = Classes/CCTrip.h; sourceTree = "<group>"; };
-		4D88913719EBCB2200773C16 /* CCTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTrip.m; path = Classes/CCTrip.m; sourceTree = "<group>"; };
 		4D88913A19EBCB6A00773C16 /* CCStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCStation.h; path = Classes/CCStation.h; sourceTree = "<group>"; };
 		4D88913B19EBCB6A00773C16 /* CCStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCStation.m; path = Classes/CCStation.m; sourceTree = "<group>"; };
 		4D88913E19EBCD2800773C16 /* CCTripModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTripModel.h; path = Classes/CCTripModel.h; sourceTree = "<group>"; };
@@ -255,6 +308,7 @@
 				4DCC8EE419E9C19C00CEA064 /* All */,
 				4D23530C19E9971B001D6350 /* Add */,
 				4D23530B19E99711001D6350 /* MyTrip */,
+				4D7D25D219ED09230087C36F /* Detail */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -390,8 +444,14 @@
 			children = (
 				4D88913A19EBCB6A00773C16 /* CCStation.h */,
 				4D88913B19EBCB6A00773C16 /* CCStation.m */,
-				4D88913619EBCB2200773C16 /* CCTrip.h */,
-				4D88913719EBCB2200773C16 /* CCTrip.m */,
+				4D7D262619ED74120087C36F /* CCTrip.h */,
+				4D7D262719ED74120087C36F /* CCTrip.m */,
+				4D7D261119ED46B90087C36F /* CCTripPossibility.h */,
+				4D7D261219ED46B90087C36F /* CCTripPossibility.m */,
+				4D7D261919ED46BA0087C36F /* CCTripPart.h */,
+				4D7D261A19ED46BA0087C36F /* CCTripPart.m */,
+				4D7D261519ED46BA0087C36F /* CCTripStop.h */,
+				4D7D261619ED46BA0087C36F /* CCTripStop.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -399,7 +459,7 @@
 		4D3805C719E831EB000BC554 = {
 			isa = PBXGroup;
 			children = (
-				4D84F2B519EC13F200F29562 /* Seeds */,
+				4D7D25E419ED146B0087C36F /* Seeds */,
 				4D06847219EB32BE006B088A /* Seeds */,
 				4D3805D219E831EB000BC554 /* My NS */,
 				4D3805EF19E831EB000BC554 /* My NSTests */,
@@ -464,13 +524,110 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4D7D25D219ED09230087C36F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4D7D25D319ED09330087C36F /* Application Logic */,
+				4D7D25D419ED093A0087C36F /* User Interface */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		4D7D25D319ED09330087C36F /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				4D7D25FF19ED2C690087C36F /* Networking */,
+				4D7D25DA19ED09700087C36F /* Interactor */,
+				4D7D25D919ED09690087C36F /* Manager */,
+				4D7D25D819ED09600087C36F /* Module Interface */,
+			);
+			name = "Application Logic";
+			sourceTree = "<group>";
+		};
+		4D7D25D419ED093A0087C36F /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4D7D25D719ED094F0087C36F /* Presenter */,
+				4D7D25D619ED094A0087C36F /* View */,
+				4D7D25D519ED09450087C36F /* Wireframe */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		4D7D25D519ED09450087C36F /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				4D7D25DC19ED0B250087C36F /* CCDetailWireFrame.h */,
+				4D7D25DD19ED0B250087C36F /* CCDetailWireFrame.m */,
+			);
+			name = Wireframe;
+			sourceTree = "<group>";
+		};
+		4D7D25D619ED094A0087C36F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D7D25F919ED1BCA0087C36F /* CCDetailInterface.h */,
+				4D7D25E719ED172D0087C36F /* CCDetailViewController.h */,
+				4D7D25E819ED172D0087C36F /* CCDetailViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4D7D25D719ED094F0087C36F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4D7D25EB19ED1AB80087C36F /* CCDetailPresenter.h */,
+				4D7D25EC19ED1AB80087C36F /* CCDetailPresenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		4D7D25D819ED09600087C36F /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4D7D25FE19ED21940087C36F /* CCDetailModuleInterface.h */,
+			);
+			name = "Module Interface";
+			sourceTree = "<group>";
+		};
+		4D7D25D919ED09690087C36F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4D7D25F419ED1AF20087C36F /* CCDetailDataManager.h */,
+				4D7D25F519ED1AF20087C36F /* CCDetailDataManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		4D7D25DA19ED09700087C36F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4D7D25F819ED1B470087C36F /* CCDetailInteractorIO.h */,
+				4D7D25F019ED1AD20087C36F /* CCDetailInteractor.h */,
+				4D7D25F119ED1AD20087C36F /* CCDetailInteractor.m */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		4D7D25FF19ED2C690087C36F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		4DCC8EB919E9A29000CEA064 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4D7D262519ED5A380087C36F /* CCServerManagerDelegate.h */,
+				4D7D260D19ED34220087C36F /* CCServerManager.h */,
+				4D7D260E19ED34220087C36F /* CCServerManager.m */,
 				4DCC8EB619E9A28200CEA064 /* CCTableViewController.h */,
 				4DCC8EB719E9A28200CEA064 /* CCTableViewController.m */,
 				4DCC8EBA19E9A2E800CEA064 /* CCViewController.h */,
 				4DCC8EBB19E9A2E800CEA064 /* CCViewController.m */,
+				4D68446D19F16973002735C8 /* CCMultipleTableViewController.h */,
+				4D68446E19F16974002735C8 /* CCMultipleTableViewController.m */,
 				4D0683C719EACCE2006B088A /* CCManagedObjectModel.h */,
 				4D0683C819EACCE2006B088A /* CCManagedObjectModel.m */,
 				4D0683CA19EACD38006B088A /* CCRestKitMappebleObject.h */,
@@ -480,6 +637,10 @@
 				4D06840F19EB22E9006B088A /* CCFetchedResultPresenter.h */,
 				4D06841019EB22E9006B088A /* CCFetchedResultPresenter.m */,
 				4D06841319EB2ED6006B088A /* CCFetchedResultsPresenter+Protected.h */,
+				4D7D260419ED2D1D0087C36F /* CCObjectsFetcher.h */,
+				4D7D260519ED2D1D0087C36F /* CCObjectsFetcher.m */,
+				4D7D261D19ED52570087C36F /* CCUtils.h */,
+				4D7D261E19ED52570087C36F /* CCUtils.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -552,9 +713,9 @@
 		4DCC8EDF19E9BF0900CEA064 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4D88914219EBCFD400773C16 /* CCAddViewInterface.h */,
 				4DCC8EE119E9BF3800CEA064 /* CCAddViewController.h */,
 				4DCC8EE219E9BF3800CEA064 /* CCAddViewController.m */,
-				4D88914219EBCFD400773C16 /* CCAddViewInterface.h */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -637,8 +798,8 @@
 			isa = PBXGroup;
 			children = (
 				4DCC8EED19E9C1FA00CEA064 /* CCAllStationsTableViewController.h */,
-				4DCC8EEE19E9C1FA00CEA064 /* CCAllStationsTableViewController.m */,
 				4D88913519EBC02B00773C16 /* CCAllStationsInterface.h */,
+				4DCC8EEE19E9C1FA00CEA064 /* CCAllStationsTableViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -739,6 +900,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = CleverCode;
 				TargetAttributes = {
+					4D06844119EB3112006B088A = {
+						DevelopmentTeam = 4FD8M87392;
+					};
 					4D3805EB19E831EB000BC554 = {
 						CreatedOnToolsVersion = 6.1;
 						TestTargetID = 4D06844119EB3112006B088A;
@@ -770,6 +934,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7D25E619ED14B20087C36F /* Seeds in Resources */,
 				4D06847419EB32C8006B088A /* data.xml in Resources */,
 				4D0683B719EAC74B006B088A /* Main.storyboard in Resources */,
 				4D84F2BC19EC187C00F29562 /* CCMyTripTableViewCell.xib in Resources */,
@@ -782,7 +947,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D84F2B619EC13F200F29562 /* Seeds in Resources */,
+				4D7D25E519ED146B0087C36F /* Seeds in Resources */,
 				4D06847619EB3AF4006B088A /* data.xml in Resources */,
 				4D06846519EB3112006B088A /* Main.storyboard in Resources */,
 				4D06846619EB3112006B088A /* LaunchScreen.xib in Resources */,
@@ -884,34 +1049,46 @@
 			files = (
 				4D84F2BD19EC1CEA00F29562 /* CCMyTripTableViewCell.m in Sources */,
 				4D06839E19EAC74B006B088A /* CCRootWireFrame.m in Sources */,
+				4D7D261819ED46BA0087C36F /* CCTripStop.m in Sources */,
+				4D7D25F719ED1AF20087C36F /* CCDetailDataManager.m in Sources */,
 				4D0683D319EAD097006B088A /* CCManagedObjectModel.m in Sources */,
 				4D06839F19EAC74B006B088A /* CCMyTripPresenter.m in Sources */,
 				4D0683A019EAC74B006B088A /* CCAllStationsWireframe.m in Sources */,
 				4D06841219EB22E9006B088A /* CCFetchedResultPresenter.m in Sources */,
 				4D0683A119EAC74B006B088A /* CCMyTripDataManager.m in Sources */,
+				4D7D261019ED34220087C36F /* CCServerManager.m in Sources */,
 				4D0683D419EAD09B006B088A /* CCManagedObject.m in Sources */,
 				4D88914A19EBD72200773C16 /* CCAddDataManager.m in Sources */,
+				4D7D25DF19ED0B250087C36F /* CCDetailWireFrame.m in Sources */,
 				4D0683A219EAC74B006B088A /* CCAllStationsTableViewController.m in Sources */,
+				4D68447019F16974002735C8 /* CCMultipleTableViewController.m in Sources */,
 				4D0683A319EAC74B006B088A /* CCSeedAppDelegate.m in Sources */,
 				4D0683A419EAC74B006B088A /* CCViewController.m in Sources */,
 				4D0683A519EAC74B006B088A /* CCAppDelegate.m in Sources */,
 				4D0683A619EAC74B006B088A /* CCMyTripWireFrame.m in Sources */,
+				4D7D260719ED2D1D0087C36F /* CCObjectsFetcher.m in Sources */,
 				4D0683A719EAC74B006B088A /* CCMyTripTableViewController.m in Sources */,
 				4D0683A819EAC74B006B088A /* CCAppDependancies.m in Sources */,
+				4D7D262019ED52570087C36F /* CCUtils.m in Sources */,
 				4D0683AA19EAC74B006B088A /* CCAllStationsPresenter.m in Sources */,
-				4D88913919EBCB2200773C16 /* CCTrip.m in Sources */,
+				4D7D261419ED46B90087C36F /* CCTripPossibility.m in Sources */,
 				4D0683AB19EAC74B006B088A /* My_NS.xcdatamodeld in Sources */,
 				4D0683AC19EAC74B006B088A /* main.m in Sources */,
 				4D88913D19EBCB6A00773C16 /* CCStation.m in Sources */,
+				4D7D25F319ED1AD20087C36F /* CCDetailInteractor.m in Sources */,
+				4D7D25EA19ED172D0087C36F /* CCDetailViewController.m in Sources */,
 				4D06840E19EB1E6B006B088A /* CCAllStationsDataManager.m in Sources */,
+				4D7D261C19ED46BA0087C36F /* CCTripPart.m in Sources */,
 				4D0683D219EAD093006B088A /* CCManagedObjectStore.m in Sources */,
 				4D0683AD19EAC74B006B088A /* CCAddWireFrame.m in Sources */,
 				4D0683AE19EAC74B006B088A /* CCTableViewController.m in Sources */,
 				4D0683AF19EAC74B006B088A /* CCAddViewController.m in Sources */,
 				4D0683B019EAC74B006B088A /* CCAddPresenter.m in Sources */,
+				4D7D25EE19ED1AB80087C36F /* CCDetailPresenter.m in Sources */,
 				4D0683B119EAC74B006B088A /* CCAddInteractor.m in Sources */,
 				4D0683B219EAC74B006B088A /* CCAllStationsInteractor.m in Sources */,
 				4D0683B319EAC74B006B088A /* CCMyTripInteractor.m in Sources */,
+				4D7D262919ED74120087C36F /* CCTrip.m in Sources */,
 				4D88914119EBCD2800773C16 /* CCTripModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -922,34 +1099,46 @@
 			files = (
 				4D84F2B919EC17E600F29562 /* CCMyTripTableViewCell.m in Sources */,
 				4D06844519EB3112006B088A /* CCRootWireFrame.m in Sources */,
+				4D7D261719ED46BA0087C36F /* CCTripStop.m in Sources */,
+				4D7D25F619ED1AF20087C36F /* CCDetailDataManager.m in Sources */,
 				4D06844619EB3112006B088A /* CCManagedObjectModel.m in Sources */,
 				4D06844719EB3112006B088A /* CCMyTripPresenter.m in Sources */,
 				4D06844819EB3112006B088A /* CCAllStationsWireframe.m in Sources */,
 				4D06844919EB3112006B088A /* CCFetchedResultPresenter.m in Sources */,
 				4D06844A19EB3112006B088A /* CCMyTripDataManager.m in Sources */,
+				4D7D260F19ED34220087C36F /* CCServerManager.m in Sources */,
 				4D06844B19EB3112006B088A /* CCManagedObject.m in Sources */,
 				4D88914919EBD72200773C16 /* CCAddDataManager.m in Sources */,
+				4D7D25DE19ED0B250087C36F /* CCDetailWireFrame.m in Sources */,
 				4D06844C19EB3112006B088A /* CCAllStationsTableViewController.m in Sources */,
+				4D68446F19F16974002735C8 /* CCMultipleTableViewController.m in Sources */,
 				4D06844D19EB3112006B088A /* CCSeedAppDelegate.m in Sources */,
 				4D06844E19EB3112006B088A /* CCViewController.m in Sources */,
 				4D06844F19EB3112006B088A /* CCAppDelegate.m in Sources */,
 				4D06845019EB3112006B088A /* CCMyTripWireFrame.m in Sources */,
+				4D7D260619ED2D1D0087C36F /* CCObjectsFetcher.m in Sources */,
 				4D06845119EB3112006B088A /* CCMyTripTableViewController.m in Sources */,
 				4D06845219EB3112006B088A /* CCAppDependancies.m in Sources */,
+				4D7D261F19ED52570087C36F /* CCUtils.m in Sources */,
 				4D06845419EB3112006B088A /* CCAllStationsPresenter.m in Sources */,
-				4D88913819EBCB2200773C16 /* CCTrip.m in Sources */,
+				4D7D261319ED46B90087C36F /* CCTripPossibility.m in Sources */,
 				4D06845519EB3112006B088A /* My_NS.xcdatamodeld in Sources */,
 				4D06845619EB3112006B088A /* main.m in Sources */,
 				4D88913C19EBCB6A00773C16 /* CCStation.m in Sources */,
+				4D7D25F219ED1AD20087C36F /* CCDetailInteractor.m in Sources */,
+				4D7D25E919ED172D0087C36F /* CCDetailViewController.m in Sources */,
 				4D06845719EB3112006B088A /* CCAllStationsDataManager.m in Sources */,
+				4D7D261B19ED46BA0087C36F /* CCTripPart.m in Sources */,
 				4D06845819EB3112006B088A /* CCManagedObjectStore.m in Sources */,
 				4D06845919EB3112006B088A /* CCAddWireFrame.m in Sources */,
 				4D06845A19EB3112006B088A /* CCTableViewController.m in Sources */,
 				4D06845B19EB3112006B088A /* CCAddViewController.m in Sources */,
 				4D06845C19EB3112006B088A /* CCAddPresenter.m in Sources */,
+				4D7D25ED19ED1AB80087C36F /* CCDetailPresenter.m in Sources */,
 				4D06845D19EB3112006B088A /* CCAddInteractor.m in Sources */,
 				4D06845E19EB3112006B088A /* CCAllStationsInteractor.m in Sources */,
 				4D06845F19EB3112006B088A /* CCMyTripInteractor.m in Sources */,
+				4D7D262819ED74120087C36F /* CCTrip.m in Sources */,
 				4D88914019EBCD2800773C16 /* CCTripModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1013,7 +1202,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/My NS Seeds.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "My NS Seed";
-				PROVISIONING_PROFILE = "16d6847e-c41b-4057-bb38-ddfc2a6d88ad";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1028,7 +1217,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/My NS Seeds.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "My NS Seed";
-				PROVISIONING_PROFILE = "16d6847e-c41b-4057-bb38-ddfc2a6d88ad";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -1045,6 +1234,7 @@
 					"COCOAPODS=1",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/My NS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "My NS";
 				PROVISIONING_PROFILE = "16d6847e-c41b-4057-bb38-ddfc2a6d88ad";
@@ -1060,6 +1250,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "My NS/My NS-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/My NS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "My NS";
 				PROVISIONING_PROFILE = "16d6847e-c41b-4057-bb38-ddfc2a6d88ad";

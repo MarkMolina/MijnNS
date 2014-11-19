@@ -12,6 +12,8 @@
 #import "CCMyTripPresenter.h"
 #import "CCRootWireFrame.h"
 #import "CCAddWireFrame.h"
+#import "CCDetailViewController.h"
+#import "CCDetailWireFrame.h"
 
 static NSString *MyTripTableViewControllerIdentifier = @"CCMyTripTableViewController";
 
@@ -36,6 +38,10 @@ static NSString *MyTripTableViewControllerIdentifier = @"CCMyTripTableViewContro
 
 - (void)presentAddInterface {
     [self.addWireframe presentAddInterfaceFromViewController:self.myTripTableViewController];
+}
+
+- (void)pushDetailInterfaceWithTripProperties:(NSDictionary *)dict {
+    [self.detailWireFrame pushInterfaceFromNavigationController:self.myTripTableViewController.navigationController withDict:dict];
 }
 
 - (CCMyTripTableViewController *)myTripTableViewControllerFromStoryboard

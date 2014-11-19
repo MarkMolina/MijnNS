@@ -36,4 +36,32 @@
     [self.managedObjectStore save];
 }
 
+- (NSManagedObject *)objectForId:(NSManagedObjectID *)objectId {
+    return [self.managedObjectStore.managedObjectContext objectWithID:objectId];
+}
+
+- (void)tripFrom:(NSString *)from
+              to:(NSString *)to
+            date:(NSString *)date
+ completionBlock:(void (^)(NSArray *trips))completionBlock {
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(from.code == %@) AND (to.code == %@)", from, to];
+    NSArray *sortDescriptors = @[];
+    
+    [self.managedObjectStore
+     fetchEntriesWithPredicate:predicate
+     sortDescriptors:sortDescriptors
+     forModel:[CCTrip class]
+     completionBlock:^(NSArray *entries) {
+         if (completionBlock)
+         {
+             completionBlock(entries);
+         }
+     }];
+}
+
+- (void)save {
+    [self.managedObjectStore.managedObjectContext save:nil];
+}
+
 @end

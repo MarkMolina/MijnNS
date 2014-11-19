@@ -26,7 +26,7 @@ static NSString *AddViewControllerIdentifier = @"CCAllStationsTableViewControlle
     
     CCAllStationsTableViewController *allStationTableViewController = [self allStationsTableViewController];
     allStationTableViewController.eventHandler = self.allStationsPresenter;
-    [allStationTableViewController setDelegate:self.allStationsPresenter];
+    allStationTableViewController.delegate = self.allStationsPresenter;
 
     self.allStationsPresenter.userInterface = allStationTableViewController;
     

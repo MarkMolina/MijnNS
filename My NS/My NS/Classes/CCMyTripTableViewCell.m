@@ -10,4 +10,12 @@
 
 @implementation CCMyTripTableViewCell
 
+- (void)isLoading:(BOOL)loaded {
+    if (loaded) {
+        _activityIndicatorContainer.hidden = YES;
+    } else {
+        _activityIndicatorContainer.hidden = NO;
+    }
+}
+
 @end

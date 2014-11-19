@@ -48,9 +48,19 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13h-4O-DM0">
+                        <rect key="frame" x="0.0" y="1" width="320" height="106"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ehq-dg-Vb5">
+                                <rect key="frame" x="150" y="43" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="activityIndicatorContainer" destination="13h-4O-DM0" id="ntN-hy-kCi"/>
                 <outlet property="dateLabel" destination="imH-wh-iuK" id="fLZ-3P-Aph"/>
                 <outlet property="fromLabel" destination="TGq-3T-diS" id="2w6-Pu-bge"/>
                 <outlet property="fromTimeLabel" destination="z5r-8u-fpY" id="k6H-9e-qWP"/>
@@ -58,7 +68,7 @@
                 <outlet property="toTimeLabel" destination="l2w-eV-6KP" id="i18-UG-ISp"/>
                 <outlet property="viaLabel" destination="PNI-mW-OkQ" id="On9-bO-Ye3"/>
             </connections>
-            <point key="canvasLocation" x="854" y="448.5"/>
+            <point key="canvasLocation" x="854" y="447.5"/>
         </tableViewCell>
     </objects>
 </document>

@@ -22,6 +22,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+    
     
     [CCManagedObjectStore setSharedManagedObjectModel:CCManagedObjectModel.defaultManagedObjectModel];
     

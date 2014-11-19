@@ -25,6 +25,13 @@
 #import "CCAllStationsPresenter.h"
 #import "CCAllStationsWireframe.h"
 
+#import "CCDetailDataManager.h"
+#import "CCDetailInteractor.h"
+#import "CCDetailPresenter.h"
+#import "CCDetailWireFrame.h"
+
+#import "CCServerManager.h"
+
 @interface CCAppDependancies ()
 
 @property (nonatomic, strong) CCMyTripWireFrame *myTripWireframe;
@@ -53,8 +60,11 @@
 
 - (void)configureDependencies {
     CCManagedObjectStore *dataStore = [CCManagedObjectStore new];
-    
     CCRootWireFrame *rootWireFrame = [CCRootWireFrame new];
+    
+    CCServerManager *serverManager = [CCServerManager sharedInstance];
+    serverManager.managedObjectStore = dataStore;
+    [serverManager configObjectManager];
     
     // My Trip Module
     CCMyTripDataManager *myTripDataManager = [CCMyTripDataManager new];
@@ -69,11 +79,17 @@
     CCAddWireFrame *addWireframe = [CCAddWireFrame new];
     
     
-    // All Stations
+    // All Stations Module
     CCAllStationsDataManager *allStationsDataManager = [CCAllStationsDataManager new];
     CCAllStationsInteractor *allStationsInteractor = [[CCAllStationsInteractor alloc] initWithDataManager:allStationsDataManager];
     CCAllStationsPresenter *allStationsPresenter = [CCAllStationsPresenter new];
     CCAllStationsWireframe *allstationsWireframe = [CCAllStationsWireframe new];
+    
+    // Detail Module
+    CCDetailDataManager *detailDataManager = [CCDetailDataManager new];
+    CCDetailInteractor *detailInteractor = [[CCDetailInteractor alloc] initWithDataManager:detailDataManager];
+    CCDetailPresenter *detailPresenter = [CCDetailPresenter new];
+    CCDetailWireFrame *detailWireFrame = [CCDetailWireFrame new];
     
     // My Trip
     myTripInteractor.output = myTripPresenter;
@@ -84,6 +100,7 @@
     myTripWireFrame.addWireframe = addWireframe;
     myTripWireFrame.myTripPresenter = myTripPresenter;
     myTripWireFrame.rootWireframe = rootWireFrame;
+    myTripWireFrame.detailWireFrame = detailWireFrame;
     
     myTripDataManager.managedObjectStore = dataStore;
     self.myTripWireframe = myTripWireFrame;
@@ -101,7 +118,7 @@
     
     // All Stations
     allStationsInteractor.output = allStationsPresenter;
-    
+
     allStationsPresenter.allStationsInteractor = allStationsInteractor;
     allStationsPresenter.allStationsWireframe = allstationsWireframe;
 
@@ -109,7 +126,15 @@
                                                         
     allStationsDataManager.managedObjectStore = dataStore;
     
+    // Detail
+    detailInteractor.output = detailPresenter;
     
+    detailPresenter.detailInteractor = detailInteractor;
+    detailPresenter.detailWireFrame = detailWireFrame;
+    
+    detailWireFrame.detailPresenter = detailPresenter;
+    
+    detailDataManager.managedObjectStore = dataStore;
 }
 
 @end

@@ -14,6 +14,9 @@
 
 - (void)fetchMyTrips;
 - (void)deleteTrip:(CCTrip *)trip;
+- (void)fetchTripPossibilitesForTrip:(CCTrip *)trip;
+- (NSString *)getActualArrivalTimeForTrip:(CCTrip *)trip;
+- (NSString *)getActualDepartureTimeForTrip:(CCTrip *)trip;
 
 @end
 

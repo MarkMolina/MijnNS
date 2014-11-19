@@ -11,14 +11,17 @@
 @class CCMyTripPresenter;
 @class CCRootWireFrame;
 @class CCAddWireFrame;
+@class CCDetailWireFrame;
 
 @interface CCMyTripWireFrame : NSObject
 
+@property (nonatomic, strong) CCDetailWireFrame *detailWireFrame;
 @property (nonatomic, strong) CCAddWireFrame *addWireframe;
 @property (nonatomic, strong) CCMyTripPresenter *myTripPresenter;
 @property (nonatomic, strong) CCRootWireFrame *rootWireframe;
 
 - (void)presentMyTripInterfaceFromWindow:(UIWindow *)window;
 - (void)presentAddInterface;
+- (void)pushDetailInterfaceWithTripProperties:(NSDictionary *)dict;
 
 @end

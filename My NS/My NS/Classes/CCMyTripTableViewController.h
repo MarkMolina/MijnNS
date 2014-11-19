@@ -9,8 +9,9 @@
 #import "CCTableViewController.h"
 #import "CCMyTripInterface.h"
 #import "CCMyTripModuleInterface.h"
+#import "CCFetchedResultPresenter.h"
 
-@interface CCMyTripTableViewController : CCTableViewController <CCMyTripInterface>
+@interface CCMyTripTableViewController : CCTableViewController <CCMyTripInterface, CCFetchedResultsPresenter>
 
 @property (nonatomic, weak) id<CCMyTripModuleInterface> eventHandler;
 

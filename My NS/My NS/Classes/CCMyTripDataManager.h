@@ -15,5 +15,11 @@
 
 - (void)fetchMyTripsWithCompletionBlock:(void (^)(NSFetchedResultsController *fetchedResultController))completionBlock;
 - (void)deleteTrip:(CCTrip *)trip;
+- (NSManagedObject *)objectForId:(NSManagedObjectID *)objectId;
+- (void)tripFrom:(NSString *)from
+              to:(NSString *)to
+            date:(NSString *)date
+ completionBlock:(void (^)(NSArray *trips))completionBlock;
+- (void)save;
 
 @end

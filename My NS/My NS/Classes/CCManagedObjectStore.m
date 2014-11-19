@@ -156,4 +156,27 @@ static CCManagedObjectStore *__sharedInstance;
     }
 }
 
+- (void)fetchEntriesWithPredicate:(NSPredicate *)predicate
+                  sortDescriptors:(NSArray *)sortDescriptors
+                         forModel:(Class) model
+                  completionBlock:(CCDataStoreFetchCompletionBlock)completionBlock
+{
+    if (![model isSubclassOfClass:[CCManagedObject class]]) {
+        return;
+    }
+    
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([model class])];
+    [fetchRequest setPredicate:predicate];
+    [fetchRequest setSortDescriptors:nil];
+    
+    [self.managedObjectContext performBlock:^{
+        NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:NULL];
+        
+        if (completionBlock)
+        {
+            completionBlock(results);
+        }
+    }];
+}
+
 @end

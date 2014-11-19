@@ -18,6 +18,10 @@
 static CGFloat const CCMyTripCellHeight = 107.0f;
 static NSString *const CCMyTripsTableViewCellIdentifier = @"CCMyTripsTableViewCellIdentifier";
 
+@interface CCMyTripPresenter()
+
+@end
+
 @interface CCMyTripPresenter (CCMyTripsTableViewControllerDelegate) <CCTableViewControllerDelegate>
 @end
 
@@ -32,23 +36,30 @@ static NSString *const CCMyTripsTableViewCellIdentifier = @"CCMyTripsTableViewCe
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     CCTrip *trip = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    [((CCMyTripTableViewCell*)cell) isLoading:trip.loaded];
+    
     [((CCMyTripTableViewCell*)cell).fromLabel setText:trip.from.longName];
     [((CCMyTripTableViewCell*)cell).viaLabel setText:trip.via.longName];
     [((CCMyTripTableViewCell*)cell).toLabel setText:trip.to.longName];
+    [((CCMyTripTableViewCell*)cell).fromTimeLabel setText:[self.myTripInteractor getActualDepartureTimeForTrip:trip]];
+    [((CCMyTripTableViewCell*)cell).dateLabel setText:trip.departureDate];
+    [((CCMyTripTableViewCell*)cell).toTimeLabel setText:[self.myTripInteractor getActualArrivalTimeForTrip:trip]];
+    
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
 
-- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
-{
-    CCMyTripTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CCMyTripsTableViewCellIdentifier forIndexPath:indexPath];
-    [self configureCell:cell atIndexPath:indexPath];
-    return cell;
+- (void)fetchTripPossibilities {
+    for (CCTrip *trip in self.fetchedResultsController.fetchedObjects) {
+        [self.myTripInteractor fetchTripPossibilitesForTrip:trip];
+    }
 }
 
-#pragma mark - CCMyTripInteractorInput
+#pragma mark - CCMyTripInteractorOutput
 
 - (void)fetchedMyTrips:(NSFetchedResultsController *)fetchedResutlsController {
     [self setFetchedResultsController:fetchedResutlsController];
+    [self fetchTripPossibilities];
 }
 
 #pragma mark - CCMyTripModuleInterface
@@ -60,11 +71,11 @@ static NSString *const CCMyTripsTableViewCellIdentifier = @"CCMyTripsTableViewCe
 #pragma mark - CCAddModuleDelegateInterface
 
 - (void)addModuleDidCancelAddAction {
-    
+    //deprecated
 }
 
 - (void)addModuleDidSaveAddAction {
-    
+    //deprecated
 }
 
 @end
@@ -94,6 +105,11 @@ static NSString *const CCMyTripsTableViewCellIdentifier = @"CCMyTripsTableViewCe
 
 - (NSIndexPath*)tableView:(UITableView*)tableView willSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
+    CCTrip *trip = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:trip.travelDate, @"travelDate", [NSNumber numberWithBool:YES], @"departure", trip.from, @"from", trip.to, @"to", nil];
+    [self.myTripWireFrame pushDetailInterfaceWithTripProperties:dict];
+    
     return indexPath;
 }
 
@@ -104,6 +120,13 @@ static NSString *const CCMyTripsTableViewCellIdentifier = @"CCMyTripsTableViewCe
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     CCTrip *trip = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [self.myTripInteractor deleteTrip:trip];
+}
+
+- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    CCMyTripTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CCMyTripsTableViewCellIdentifier forIndexPath:indexPath];
+    [self configureCell:cell atIndexPath:indexPath];
+    return cell;
 }
 
 @end

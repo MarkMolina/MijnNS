@@ -16,5 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *fromTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *toTimeLabel;
+@property (weak, nonatomic) IBOutlet UIView *activityIndicatorContainer;
+
+- (void)isLoading:(BOOL)loading;
 
 @end
