@@ -6,22 +6,24 @@ before_install:
 - brew unlink xctool
 - brew install xctool
 before_script:
-  - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/My_NS_AdHoc.mobileprovision.enc -d -a -out scripts/profile/My_NS_AdHoc.mobileprovision
-  - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer.enc -d -a -out scripts/certs/dist.cer
-  - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.p12.enc -d -a -out scripts/certs/dist.p12
-  - ./scripts/add-key.sh
-  - ./scripts/update-bundle.sh
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/My_NS_AdHoc.mobileprovision.enc -d -a -out scripts/profile/My_NS_AdHoc.mobileprovision
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer.enc -d -a -out scripts/certs/dist.cer
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.p12.enc -d -a -out scripts/certs/dist.p12
+- ./scripts/add-key.sh
+- ./scripts/update-bundle.sh
 script:
 - xctool -workspace My\ NS.xcworkspace -scheme My\ NS -sdk iphoneos -configuration Distribution OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
 - xctool test -workspace My\ NS.xcworkspace -scheme My\ NSTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 after_script:
-  - ./scripts/remove-key.sh
+- ./scripts/remove-key.sh
 after_success:
-  - ./scripts/sign-and-upload.sh
+- ./scripts/sign-and-upload.sh
 env:
   global:
   - APP_NAME="My NS"
   - 'DEVELOPER_NAME="iPhone Distribution: De Nederlandse Wateren (4FD8M87392)"'
   - PROFILE_NAME="My_NS_AdHoc"
-  - secure: mHmq2wFXJxYDctL/K7JjCl2IxqsPgwftpadyBRtBTHHUoYaiy4RncPOaT9OoUp8/gMRGDyEWU2H9KwZq+OC0BN7FByeV/NRvqzDHJwxTRiUxdYawCFxMmONQg17wJSnXgc+IfJGtFXZKcLgZII/lnJ+s3LcSRxip7yqfub0kYAQ=
-  - secure: ZksfpkJxfp4l9RpS7ly/hzf6ni8tTUXRjbpZgucOJxtDDuk5rj+KqEpicoz+g1Ow8kifw2H+qpvj4AqLXJ32OR2Y1Z5Fy+DLZDpy//lkeK+zlFRdEQtoStQLu2qM4vuzlwWdwk08+1HKjOSFVYw6Mffu7o14Ekc9fpONlig6atw=
+  - secure: mnG0mgyW2EhivAdEYENmLLwZlwkFtUWPeU5ovCovFCIWkUqJ8N0u94t+Y3cTRdEP6enB76cgvYd3YSOsVd2XUt5ufVtNRy6YUqrCVtCS/CKsPujbWr96kXlNyvo3LalP2t9Sa6UcjIK6HVdfYryIezWym08Khlct8GfN18w/BMg=
+  - secure: SbzlRUfVYvjZJ1pWZ7RNpgvbijOcOSBTSU0SnnCVXkPVdu8hWVuGFirwcgVnD/pp4E9FU9815IV6KZ5+IU35JI3/ofvwm23YhWgUoIaQIEKC7IxyzNlAHfSvz+Yuy/AnsP1/DPDvO8kfQns+XwR7LzSO5b4X3CgFqppeoEThQxE=
+  - secure: UgmaPOSItyyZoMD0jQ+7is/+g9QRrRhm+LcEP5x4CtsDSQf445wAx/w9h2sXD+fue+pqT2TG6SpMgXBuh8HdeduJiy0m0drSrKAz/5OsSw4q3zFavsxQM1d70y4psafE+Wk1no/kAQxp8V4xTBXm8znxMfKMdRP5DX/WvpbSdP0=
+  - secure: Amp+KhRbuU5AwJ/6jVdyFShAVPxzDCx5WTqOrgaV7+PB+0fjjUVo8Cu0MqF4IWwRcKSdoWOjvoR8OjghNrTvVVttkwyg4KI5FbzztpbLMly9WS0mBI+KseuQSoZ8sHLqWJoo4Eabmcsn7aONhf/NwP+lIJiXiGkzQ5lOtLrLOhU=
