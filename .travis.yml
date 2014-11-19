@@ -1,10 +1,27 @@
 language: objective-c
 rvm: 1.9.3
 before_install:
-  - gem install cocoapods -v '0.34.1'
-  - brew update
-  - brew unlink xctool
-  - brew install xctool
+- gem install cocoapods -v '0.34.1'
+- brew update
+- brew unlink xctool
+- brew install xctool
+before_script:
+  - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/My_NS_AdHoc.mobileprovision.enc -d -a -out scripts/profile/My_NS_AdHoc.mobileprovision
+  - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer.enc -d -a -out scripts/certs/dist.cer
+  - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.p12.enc -d -a -out scripts/certs/dist.p12
+  - ./scripts/add-key.sh
+  - ./scripts/update-bundle.sh
 script:
-- xctool -workspace My\ NS.xcworkspace -scheme My\ NS -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- xctool -workspace My\ NS.xcworkspace -scheme My\ NS -sdk iphoneos -configuration Distribution OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
 - xctool test -workspace My\ NS.xcworkspace -scheme My\ NSTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+after_script:
+  - ./scripts/remove-key.sh
+after_success:
+  - ./scripts/sign-and-upload.sh
+env:
+  global:
+  - APP_NAME="My NS"
+  - 'DEVELOPER_NAME="iPhone Distribution: De Nederlandse Wateren (4FD8M87392)"'
+  - PROFILE_NAME="My_NS_AdHoc"
+  - secure: mHmq2wFXJxYDctL/K7JjCl2IxqsPgwftpadyBRtBTHHUoYaiy4RncPOaT9OoUp8/gMRGDyEWU2H9KwZq+OC0BN7FByeV/NRvqzDHJwxTRiUxdYawCFxMmONQg17wJSnXgc+IfJGtFXZKcLgZII/lnJ+s3LcSRxip7yqfub0kYAQ=
+  - secure: ZksfpkJxfp4l9RpS7ly/hzf6ni8tTUXRjbpZgucOJxtDDuk5rj+KqEpicoz+g1Ow8kifw2H+qpvj4AqLXJ32OR2Y1Z5Fy+DLZDpy//lkeK+zlFRdEQtoStQLu2qM4vuzlwWdwk08+1HKjOSFVYw6Mffu7o14Ekc9fpONlig6atw=
