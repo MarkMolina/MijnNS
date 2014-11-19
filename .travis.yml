@@ -1,4 +1,6 @@
 language: objective-c
 rvm: 1.9.3
+before_install:
+  - gem install cocoapods -v '0.34.1'
 script:
 - xctool test -workspace My\ NS.xcworkspace -scheme My\ NSTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
